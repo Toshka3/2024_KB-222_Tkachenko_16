@@ -11,72 +11,60 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Наблюдение за директорией</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="startButton">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>440</y>
-      <width>191</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Начать</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="stopButton">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>440</y>
-      <width>191</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Остановить</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="logTextEdit">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>10</y>
-      <width>721</width>
-      <height>381</height>
-     </rect>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>400</y>
-      <width>701</width>
-      <height>26</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>739</x>
-      <y>9</y>
-      <width>21</width>
-      <height>381</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout"/>
-   </widget>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="logLabel">
+      <property name="text">
+       <string>Журнал изменений</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="logTextEdit">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="directoryLabel">
+      <property name="text">
+       <string>Наблюдаемая директория</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Директория не выбрана</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <widget class="QPushButton" name="startButton">
+        <property name="text">
+         <string>Выбрать директорию…</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="stopButton">
+        <property name="text">
+         <string>Остановить</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
