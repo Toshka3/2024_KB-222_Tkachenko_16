@@ -32,6 +32,7 @@ private slots:
     void onFileChanged(const QString &path);
 
 private:
+    void refreshWatchedFiles(const QString &directory);
     Ui::MainWindow *ui;
     std::shared_ptr<Logger> logger;
     std::unique_ptr<QFileSystemWatcher> watcher;
